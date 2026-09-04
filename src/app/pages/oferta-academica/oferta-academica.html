@@ -1,1 +1,196 @@
-<p>oferta-academica works!</p>
+<!-- <section class="oferta-academica">
+
+  <div class="titulo-seccion">
+    <h1>OFERTA ACADÉMICA</h1>
+    <div class="linea-roja"></div>
+    <p>
+      Formación académica de calidad para cada etapa del desarrollo de nuestros estudiantes.
+    </p>
+  </div>
+
+  <div class="niveles">
+
+    <div class="nivel">
+      <div class="numero">01</div>
+
+      <div class="contenido">
+        <h2>Pre-Básica</h2>
+        <p>
+          Un espacio de aprendizaje y desarrollo para los primeros años
+          de formación de nuestros estudiantes.
+        </p>
+
+        <a href="#">CONOCER MÁS →</a>
+      </div>
+    </div>
+
+    <div class="nivel">
+      <div class="numero">02</div>
+
+      <div class="contenido">
+        <h2>Educación Básica</h2>
+        <p>
+          Formación integral enfocada en el desarrollo de conocimientos,
+          habilidades y valores.
+        </p>
+
+        <a href="#">CONOCER MÁS →</a>
+      </div>
+    </div>
+
+    <div class="nivel">
+      <div class="numero">03</div>
+
+      <div class="contenido">
+        <h2>Ciclo Común</h2>
+        <p>
+          Preparación académica para fortalecer las competencias necesarias
+          para continuar la educación media.
+        </p>
+
+        <a href="#">CONOCER MÁS →</a>
+      </div>
+    </div>
+
+    <div class="nivel">
+      <div class="numero">04</div>
+
+      <div class="contenido">
+        <h2>Bachilleratos</h2>
+        <p>
+          Educación orientada a preparar a nuestros jóvenes para sus estudios
+          superiores y su futuro profesional.
+        </p>
+
+        <a href="#">CONOCER MÁS →</a>
+      </div>
+    </div>
+
+  </div>
+
+</section> -->
+
+<section class="oferta-academica" id="oferta-academica">
+
+  <div class="titulo-seccion">
+    <h2>OFERTA ACADÉMICA</h2>
+    <div class="linea-roja"></div>
+    <p>Conoce los niveles educativos que ofrece el Colegio Liceo San Juan.</p>
+  </div>
+
+  <div class="niveles">
+
+    <div class="nivel">
+      <div class="numero">01</div>
+
+      <div class="contenido">
+        <h3>Pre-Básica</h3>
+
+        <p>
+          Formación inicial enfocada en el aprendizaje y desarrollo
+          de nuestros estudiantes.
+        </p>
+
+        <button
+          class="conocer-mas"
+          (click)="mostrarPrebasica = !mostrarPrebasica">
+          {{ mostrarPrebasica ? 'VER MENOS ↑' : 'CONOCER MÁS →' }}
+        </button>
+
+        @if (mostrarPrebasica) {
+          <div class="informacion-extra">
+            <p>
+              Grados, horarios, metodología y requisitos de Pre-Básica.
+            </p>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="nivel">
+      <div class="numero">02</div>
+
+      <div class="contenido">
+        <h3>Educación Básica</h3>
+
+        <p>
+          Desarrollo de conocimientos, habilidades y valores para
+          una formación integral.
+        </p>
+
+        <button
+          class="conocer-mas"
+          (click)="mostrarBasica = !mostrarBasica">
+          {{ mostrarBasica ? 'VER MENOS ↑' : 'CONOCER MÁS →' }}
+        </button>
+
+        @if (mostrarBasica) {
+          <div class="informacion-extra">
+            <p>
+              Grados disponibles,
+              materias, horarios y actividades de Educación Básica.
+            </p>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="nivel">
+      <div class="numero">03</div>
+
+      <div class="contenido">
+        <h3>Ciclo Común</h3>
+
+        <p>
+          Preparación académica para continuar con éxito los estudios
+          de educación media.
+        </p>
+
+        <button
+          class="conocer-mas"
+          (click)="mostrarCicloComun = !mostrarCicloComun">
+          {{ mostrarCicloComun ? 'VER MENOS ↑' : 'CONOCER MÁS →' }}
+        </button>
+
+        @if (mostrarCicloComun) {
+          <div class="informacion-extra">
+            <p>
+              Grados, asignaturas,
+              horarios y características del Ciclo Común.
+            </p>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="nivel">
+      <div class="numero">04</div>
+
+      <div class="contenido">
+        <h3>Bachilleratos</h3>
+
+        <p>
+          Formación orientada a preparar a los estudiantes para sus
+          estudios superiores y futuro profesional.
+        </p>
+
+        <button
+          class="conocer-mas"
+          (click)="mostrarBachilleratos = !mostrarBachilleratos">
+          {{ mostrarBachilleratos ? 'VER MENOS ↑' : 'CONOCER MÁS →' }}
+        </button>
+
+        @if (mostrarBachilleratos) {
+          <div class="informacion-extra">
+            <p>
+                Información sobre los bachilleratos
+              disponibles, duración, áreas de formación y requisitos.
+            </p>
+          </div>
+        }
+      </div>
+    </div>
+
+  </div>
+
+</section>

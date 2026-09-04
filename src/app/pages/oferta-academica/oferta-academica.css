@@ -1,0 +1,123 @@
+.oferta-academica {
+  background-color: #f7f8fa;
+  padding: 70px 12%;
+  min-height: 100vh;
+}
+
+
+.titulo-seccion {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.titulo-seccion h1 {
+  color: #152a55;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.linea-roja {
+  width: 45px;
+  height: 4px;
+  background-color: #a6192e;
+  margin: 0 auto 18px;
+}
+
+.titulo-seccion p {
+  color: #666;
+  font-size: 16px;
+}
+
+
+.niveles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+
+.nivel {
+  background-color: white;
+  display: flex;
+  min-height: 210px;
+  border-radius: 4px;
+  overflow: hidden;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.nivel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+.numero {
+  background-color: #172d5b;
+  color: white;
+
+  width: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 32px;
+  font-weight: bold;
+}
+
+
+
+.contenido {
+  padding: 30px;
+}
+
+.contenido h2 {
+  color: #172d5b;
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.contenido p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.contenido a {
+  color: #a6192e;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contenido a:hover {
+  text-decoration: underline;
+}
+
+
+
+@media (max-width: 800px) {
+
+  .oferta-academica {
+    padding: 50px 20px;
+  }
+
+  .niveles {
+    grid-template-columns: 1fr;
+  }
+
+  .nivel {
+    min-height: 190px;
+  }
+
+  .titulo-seccion h1 {
+    font-size: 28px;
+  }
+}
