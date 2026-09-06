@@ -7,6 +7,12 @@ export const routes: Routes = [
             import ('./pages/home/home').then ((m) => m.Home)
     },
 
+     {
+        path: 'Institucional',
+        loadComponent: () =>
+            import ('./pages/institucional/institucional').then ((m) => m.Institucional)
+    },
+
     {
         path: '',
         redirectTo: 'Home',

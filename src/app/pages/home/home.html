@@ -1,46 +1,169 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LSJ</title>
-</head>
-<body>
-    <header class="w-full bg-white shadow-sm sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
-    
-    <div class="flex items-center ">
-    
-      
-      <div>
-        <h1 class="text-blue-950 font-black text-base sm:text-lg tracking-wide leading-tight">
-          COLEGIO<br><span class="text-lg sm:text-xl">LICEO SAN JUAN</span>
-        </h1>
-        <p class="text-slate-500 text-[9px] sm:text-[10px] font-medium hidden sm:block">Educación, formación y valores para la vida.</p>
+
+
+
+<div class="min-h-screen font-sans bg-white text-gray-800 flex flex-col justify-between">
+
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <img src="/logo.jpeg" alt="Logo Colegio Liceo San Juan" class="h-14 w-auto" />
+        <div>
+          <h1 class="text-xl font-bold text-[#A30018] leading-tight">COLEGIO<br><span class="text-[#001A3D]">LICEO SAN JUAN</span></h1>
+          <p class="text-xs text-gray-500 hidden sm:block">Educación, formación y valores para la vida.</p>
+        </div>
       </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm font-semibold text-gray-700">
+        <a href="#inicio" class="text-[#8B0015] border-b-2 hover:text-[#001A3D]  border-[#A30018] pb-1">INICIO</a>
+        <a href="/Institucional" class="hover:text-[#8B0015] transition">INSTITUCIONAL ▼</a>
+        <a href="#oferta" class="hover:text-[#8B0015] transition">OFERTA ACADÉMICA ▼</a>
+        <a href="#galeria" class="hover:text-[#8B0015] transition">GALERÍA ▼</a>
+        <a href="#contacto" class="hover:text-[#8B0015] transition">CONTACTO</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="relative bg-[#001A3D] text-[#FFFFFF] overflow-hidden">
+  
+  <div class="max-w-7xl mx-auto min-h-[420px] lg:min-h-[480px] flex flex-col lg:flex-row items-center relative">
+    
+    
+    <div class="w-full lg:w-5/12 p-6 sm:p-10 lg:p-12 z-20">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-4">
+        FORMAMOS<br>HOY, <span class="text-[#FFFF]">LÍDERES</span><br>DEL MAÑANA
+      </h2>
+      <p class="text-sm sm:text-base text-gray-200 mb-6 max-w-md leading-relaxed">
+        Educación integral basada en valores, excelencia académica y formación para la vida.
+      </p>
+      <a href="#contacto" class="inline-block bg-[#8B0015] hover:bg-[#EAF7FF] hover:text-[#001A3D] text-white font-bold py-3 px-8 rounded-md transition transform hover:scale-105 shadow-md">
+        CONÓCENOS
+      </a>
     </div>
 
-
-
-    <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-xs font-bold text-slate-700">
-      <a href="#" class="text-red-600 border-b-2 border-red-600 pb-1">INICIO</a>
-      <div class="relative group cursor-pointer flex items-center gap-1 hover:text-red-600 transition">
-        <span>INSTITUCIONAL</span>
+   
+    <div class="w-full lg:w-7/12 h-72 sm:h-96 lg:h-120 relative overflow-hidden">
+      
+      
+      <div class="w-full h-full relative">
+       
+        <img 
+          src="/slide1.jpg" 
+          alt="Instalaciones del Colegio Liceo San Juan" 
+          class="absolute inset-0 w-full h-full object-cover object-center slide-img img-1" 
+        />
         
+       
+        <img 
+          src="slide2.jpg" 
+          alt="Aulas equipadas" 
+          class="absolute inset-0 w-full h-full object-cover object-center slide-img img-2" 
+        />
+        
+      
+        <img 
+          src="/slide3.jpg" 
+          alt="Áreas deportivas" 
+          class="absolute inset-0 w-full h-full object-cover object-center slide-img img-3" 
+        />
       </div>
-      <div class="relative group cursor-pointer flex items-center gap-1 hover:text-red-600 transition">
-        <span>OFERTA ACADÉMICA</span>
-      </div>
-      <div class="relative group cursor-pointer flex items-center gap-1 hover:text-red-600 transition">
-        <span>GALERÍA</span>
-      </div>
-      <a href="#" class="hover:text-red-600 transition">CONTACTO</a>
-    </nav>
 
-    
+    </div>
 
   </div>
-</header>
-    
-</body>
-</html>
+
+  
+</section>
+
+    <section class="py-10 px-4 bg-gray-50">
+      <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold text-blue-950 mb-2">¿POR QUÉ ELEGIRNOS?</h2>
+        <div class="w-12 h-1 bg-[#8B0015] mx-auto mb-12"></div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div class="flex flex-col items-center text-center p-4">
+            <div class="w-16 h-16  text-white rounded-full flex items-center justify-center text-2xl mb-4 shadow">
+              <img src="/birrete.svg" class="w-9" alt="">
+            </div>
+            <h3 class="font-bold text-blue-950 text-lg mb-2">Excelencia Académica</h3>
+            <p class="text-sm text-gray-600">Promovemos el aprendizaje continuo con estándares de calidad y dedicación.</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center p-4">
+            <div class="w-16 h-16  text-white rounded-full flex items-center justify-center text-2xl mb-4 shadow">
+              <img src="/corazon.svg" class="w-9" alt="">
+            </div>
+            <h3 class="font-bold text-blue-950 text-lg mb-2">Formación en Valores</h3>
+            <p class="text-sm text-gray-600">Guiamos a nuestros estudiantes con principios éticos y morales para la vida.</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center p-4">
+            <div class="w-16 h-16  text-white rounded-full flex items-center justify-center text-2xl mb-4 shadow">
+              <img src="/usuarios.svg" class="w-9" alt="">
+            </div>
+            <h3 class="font-bold text-blue-950 text-lg mb-2">Docentes Comprometidos</h3>
+            <p class="text-sm text-gray-600">Contamos con un equipo docente altamente capacitado y comprometido.</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center p-4">
+            <div class="w-16 h-16  text-white rounded-full flex items-center justify-center text-2xl mb-4 shadow">
+              <img src="/seguridad.svg" class="w-9" alt="">
+            </div>
+            <h3 class="font-bold text-blue-950 text-lg mb-2">Ambiente Seguro</h3>
+            <p class="text-sm text-gray-600">Ofrecemos espacios seguros y adecuados para el desarrollo integral de nuestros estudiantes.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-blue-950 text-white py-8 px-6">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center space-x-4">
+          <div class="p-3 bg-white rounded-full ">
+            <img src="/libro.svg" class="w-9" alt="">
+          </div>
+          <p class="text-lg sm:text-xl font-medium">Educamos con el corazón, enseñamos para la vida.</p>
+        </div>
+        <a href="#contacto" class="border-2  text-white hover:bg-[#8B0015] font-bold py-2 px-6 rounded transition">
+          MÁS INFORMACIÓN
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto" class="bg-white border-t text-gray-700 py-8 px-4">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-center text-sm">
+      
+      <div class="flex items-center space-x-3">
+        <img src="/logo.jpeg" alt="Logo Colegio Liceo San Juan" class="h-10 w-auto" />
+        <div>
+          <p class="font-bold text-blue-950">COLEGIO LICEO SAN JUAN</p>
+          <p class="text-xs text-gray-500">Educación, formación y valores para la vida.</p>
+        </div>
+      </div>
+
+      <div class="space-y-1 text-center md:text-left">
+        <p> <img src="/ubicacion.svg" class="w-5 " alt=""> Bo. Los Dolores, Calle La Fuente, Tegucigalpa, Francisco Morazán.</p>
+        <p> <img src="/tel.svg" class="w-5" alt=""> (504) 2234-5678</p>
+        <p> <img src="/correo.svg" class="w-5" alt=""> info@liceosanjuan.edu.hn</p>
+      </div>
+
+      <div class="flex flex-col items-center md:items-end space-y-2">
+        <span class="font-semibold text-xs text-gray-500">Síguenos en:</span>
+        <div class="flex space-x-4 text-blue-900 font-bold">
+          <a href="https://www.facebook.com/liceo.saunjuan" aria-label="Facebook" target="_blank" class="hover:text-red-600">Facebook</a>
+          <a href="https://www.instagram.com/liceosanjuanhn/" aria-label="Instagram" target="_blank" class="hover:text-red-600">Instagram</a>
+          <a href="https://wa.me/message/6V4XPC5X2ECLN1" aria-label="Whatsapp" target="_blank" class="hover:text-red-600">Whatsapp</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="border-t border-gray-200 mt-8 pt-4 text-center text-xs text-gray-500">
+      © 2026 Colegio Liceo San Juan. Todos los derechos reservados.
+    </div>
+  </footer>
+
+</div>
