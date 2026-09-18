@@ -20,6 +20,18 @@ import {
 })
 
 export class HomeComponent {
+
+  isMenuOpen: boolean = false;
+
+  // Método para alternar el estado del menú
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  // Método para cerrar el menú (por ejemplo al hacer clic en un enlace)
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
   
   collegeName = 'COLEGIO LICEO SAN JUAN';
   tagline = 'Educación, formación y valores para la vida.';
