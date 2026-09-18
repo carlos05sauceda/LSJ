@@ -7,11 +7,7 @@ export const routes: Routes = [
             import ('./pages/home/home').then ((m) => m.HomeComponent)
     },
 
-     {
-        path: 'Institucional',
-        loadComponent: () =>
-            import ('./pages/institucional/institucional').then ((m) => m.Institucional)
-    },
+    
 
      {
     path: 'OfertaAcademica',
