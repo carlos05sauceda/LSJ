@@ -21,29 +21,8 @@ import {
 
 export class HomeComponent {
 
-  isMenuOpen: boolean = false;
-
-  // Método para alternar el estado del menú
-  toggleMenu(): void {
-    this.isMenuOpen = !this.isMenuOpen;
-  }
-
-  // Método para cerrar el menú (por ejemplo al hacer clic en un enlace)
-  closeMenu(): void {
-    this.isMenuOpen = false;
-  }
   
-  collegeName = 'COLEGIO LICEO SAN JUAN';
-  tagline = 'Educación, formación y valores para la vida.';
-  logoUrl = '/logo.jpeg';
-  currentYear = new Date().getFullYear();
-
-  navItems: NavItem[] = [
-    { label: 'INICIO', link: '#inicio' },
-    { label: 'OFERTA ACADÉMICA', link: '/OfertaAcademica' },
-    { label: 'GALERÍA', link: '/Galeria' },
-    { label: 'CONTACTO', link: '/Contacto' }
-  ];
+ 
 
   slides: Slide[] = [
     { id: 1, imageUrl: '/slide1.jpg', altText: 'Instalaciones del Liceo San Juan 1' },
@@ -115,9 +94,5 @@ export class HomeComponent {
     mailtoUrl: 'mailto:sanjuanliceo@gmail.com?Subject=Interesado%20en%20el%20curso'
   };
 
-  socialLinks: SocialLink[] = [
-    { platform: 'Facebook', url: 'https://www.facebook.com/liceo.saunjuan', iconUrl: '/Facebook.svg' },
-    { platform: 'Instagram', url: 'https://www.instagram.com/liceosanjuanhn/', iconUrl: '/Instagram.svg' },
-    { platform: 'WhatsApp', url: 'https://wa.me/message/6V4XPC5X2ECLN1', iconUrl: '/Whatsapp.svg' }
-  ];
+ 
 }

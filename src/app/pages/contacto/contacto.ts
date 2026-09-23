@@ -12,15 +12,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class Contacto {
 
-  isMenuOpen: boolean = false;
-
-  toggleMenu(): void {
-    this.isMenuOpen = !this.isMenuOpen;
-  }
-
-  closeMenu(): void {
-    this.isMenuOpen = false;
-  }
+  
 
   private fb = inject(FormBuilder);
   private http = inject(HttpClient);

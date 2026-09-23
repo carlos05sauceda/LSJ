@@ -1,120 +1,6 @@
 <div class="min-h-screen bg-slate-50 text-slate-800 font-sans">
 
-  <header class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
-
-      <!-- Logo -->
-      <div class="flex items-center space-x-3">
-
-        <img
-          src="/logo.jpeg"
-          alt="Logo Colegio Liceo San Juan"
-          class="h-14 w-auto"
-        />
-
-        <div>
-          <h1 class="text-xl font-bold text-[#A30018] leading-tight">
-            COLEGIO<br>
-            <span class="text-[#001A3D]">
-              LICEO SAN JUAN
-            </span>
-          </h1>
-
-          <p class="text-xs text-gray-500 hidden sm:block">
-            Educación, formación y valores para la vida.
-          </p>
-        </div>
-
-      </div>
-
-      <!-- Navegación -->
-      <nav class="hidden md:flex space-x-6 text-sm font-semibold text-gray-700">
-
-        <a
-          href="/Home"
-          class="hover:text-[#8B0015] transition">
-          INICIO
-        </a>
-
-        <a
-          href="/OfertaAcademica"
-          class="hover:text-[#8B0015] transition">
-          OFERTA ACADÉMICA
-        </a>
-
-        <a
-          href="/Galeria"
-          class="text-[#8B0015] border-b-2 border-[#A30018] pb-1 hover:text-[#001A3D]">
-          GALERÍA
-        </a>
-
-        <a
-          href="/Contacto"
-          class="hover:text-[#8B0015] transition">
-          CONTACTO
-        </a>
-
-      </nav>
-
-
-      <button 
-      (click)="toggleMenu()" 
-      type="button" 
-      class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-[#8B0015] hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#A30018]"
-      [attr.aria-expanded]="isMenuOpen"
-      aria-label="Abrir menú principal">
-      
-      @if (!isMenuOpen) {
-        <!-- Icono Hamburguesa (Abrir) -->
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
-      } @else {
-        <!-- Icono X (Cerrar) -->
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      }
-    </button>
-
-  </div>
-
-  <!-- Menú Desplegable Móvil -->
-  @if (isMenuOpen) {
-    <div class="md:hidden border-t border-slate-200 bg-white shadow-lg">
-      <div class="px-4 pt-2 pb-4 space-y-1 sm:px-3 text-base font-semibold">
-        <a 
-          href="/Home" 
-          (click)="closeMenu()"
-          class="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-50 hover:text-[#8B0015] transition">
-          INICIO
-        </a>
-        <a 
-          href="/OfertaAcademica" 
-          (click)="closeMenu()"
-          class="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-50 hover:text-[#8B0015] transition">
-          OFERTA ACADÉMICA
-        </a>
-        <a 
-          href="/Galeria" 
-          (click)="closeMenu()"
-          class="block px-3 py-2 rounded-md bg-red-50 text-[#8B0015] font-bold border-l-4 border-[#A30018] transition">
-          GALERÍA
-        </a>
-        <a 
-          href="/Contacto" 
-          (click)="closeMenu()"
-          class="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-50 hover:text-[#8B0015] transition">
-          CONTACTO
-        </a>
-      </div>
-    </div>
-  }
-
-
-
-    
-  </header>
+  
 
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <section class="text-center max-w-3xl mx-auto mb-12">
@@ -129,7 +15,7 @@
     </section>
 
     <section
-      class="grid grid-cols-2 md:grid-cols-4 auto-rows-[180px] md:auto-rows-[220px] gap-4 px-4 sm:px-8 md:px-12 lg:px-16"
+      class="grid grid-cols-2 md:grid-cols-4 auto-rows-45 md:auto-rows-55 gap-4 px-4 sm:px-8 md:px-12 lg:px-16"
     >
       <div class="col-span-2 row-span-2 rounded-2xl overflow-hidden group shadow-sm">
         <img
@@ -359,48 +245,5 @@
     </section>
   </main>
 
-  <footer id="contacto" class="bg-white border-t text-gray-700 py-8 px-4">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-center text-sm">
-      <div class="flex items-center space-x-3">
-        <img [src]="logoUrl" [alt]="'Logo ' + collegeName" class="h-10 w-auto" />
-        <div>
-          <p class="font-bold text-blue-950">{{ collegeName }}</p>
-          <p class="text-xs text-gray-500">{{ tagline }}</p>
-        </div>
-      </div>
-
-      <div class="space-y-3">
-        <div class="flex items-start gap-3">
-          <img src="/ubicacion.svg" alt="Ubicación" class="w-5" />
-          <span>{{ contactInfo.address }}</span>
-        </div>
-
-        <div class="flex items-center gap-3">
-          <img src="/tel.svg" alt="Teléfono" class="w-5" />
-          <span>{{ contactInfo.phone }}</span>
-        </div>
-
-        <div class="flex items-center gap-3">
-          <img src="/correo.svg" alt="Correo" class="w-5" />
-          <span>{{ contactInfo.email }}</span>
-        </div>
-      </div>
-
-      <div class="flex flex-col items-center md:items-end pr-10 space-y-2">
-        <span class="font-semibold text-xs text-gray-500">Síguenos en:</span>
-
-        <div class="flex gap-3">
-          @for (social of socialLinks; track social.platform) {
-            <a [href]="social.url" target="_blank" class="hover:text-red-600">
-              <img [src]="social.iconUrl" class="w-10" [alt]="social.platform" />
-            </a>
-          }
-        </div>
-      </div>
-    </div>
-
-    <div class="border-t border-gray-200 mt-8 pt-4 text-center text-xs text-gray-500">
-      © {{ currentYear }} {{ collegeName }}. Todos los derechos reservados.
-    </div>
-  </footer>
+ 
 </div>
