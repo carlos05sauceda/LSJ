@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npx ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:LSJ": "node dist/LSJ/server/server.mjs"
@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@angular/build": "^22.1.5",
-    "@angular/cli": "^22.1.5",
+    "@angular/cli": "^22.2.0",
     "@angular/compiler-cli": "^22.1.0",
     "@netlify/angular-runtime": "^4.0.0",
     "@tailwindcss/postcss": "^4.1.12",
