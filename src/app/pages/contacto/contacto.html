@@ -1,0 +1,362 @@
+<div class="min-h-screen bg-slate-50 text-slate-800 font-sans">
+
+  <div class="min-h-screen bg-slate-50 text-slate-800 font-sans">
+
+ 
+
+
+  <section class="relative h-70 md:h-87 overflow-hidden">
+
+    <img
+      src="/Contacto banner.jpg"
+      alt="Colegio Liceo San Juan"
+      class="absolute inset-0 w-full h-full object-cover"
+    >
+
+    <div class="absolute inset-0 bg-black/55"></div>
+
+    <div class="relative z-10 h-full flex items-center justify-center px-6">
+
+      <div class="text-center text-white max-w-2xl">
+
+        <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-4">
+          Contáctanos
+        </h2>
+
+        <p class="text-gray-200 text-base md:text-lg leading-relaxed">
+          Estamos disponibles para responder tus preguntas sobre nuestros
+          programas académicos, proceso de matrícula y comunidad educativa.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <main class="py-16 px-4 sm:px-6 lg:px-8">
+
+    <div class="max-w-6xl mx-auto">
+
+      <div class="text-center max-w-2xl mx-auto mb-10">
+
+        <h2 class="text-3xl font-bold text-slate-900 mt-2">
+          Ponte en Contacto
+        </h2>
+
+        <div class="w-12 h-1 bg-[#8B0015] mx-auto mt-4 mb-4"></div>
+
+        <p class="text-slate-600">
+          Completa el formulario y te responderemos a la brevedad.
+        </p>
+
+      </div>
+
+
+      <div class="grid md:grid-cols-2 bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200">
+
+
+        <div class="relative min-h-112 md:min-h-full">
+
+          <img
+            src="/contacto.jpeg"
+            alt="Estudiantes del Liceo San Juan"
+            class="absolute inset-0 w-full h-full object-cover"
+          >
+
+          <div class="absolute inset-0 bg-[#072f60]/85"></div>
+
+          <div class="relative z-10 p-3 md:p-10 text-white h-full flex flex-col justify-center">
+
+            <span class="text-red-300 font-semibold uppercase tracking-wider text-sm">
+              Colegio Liceo San Juan
+            </span>
+
+            <h3 class="text-3xl font-bold mt-2 mb-4">
+              Queremos conocerte
+            </h3>
+
+            <p class="text-slate-200 leading-relaxed">
+              Escríbenos para conocer más sobre nuestra oferta académica,
+              proceso de matrícula y actividades educativas.
+            </p>
+
+            <div class="mt-8 space-y-5">
+
+              <div class="flex items-start gap-3">
+                <img
+                  src="/ubicacion.svg"
+                  alt="Ubicación"
+                  class="w-5 brightness-0 invert mt-1"
+                >
+                <div>
+                  <p class="font-semibold">Ubicación</p>
+                  <p class="text-sm text-slate-200">
+                    Bo. Los Dolores, Calle La Fuente,
+                    Tegucigalpa, Francisco Morazán.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <img
+                  src="/tel.svg"
+                  alt="Teléfono"
+                  class="w-5 brightness-0 invert"
+                >
+                <div>
+                  <p class="font-semibold">Teléfono</p>
+                  <p class="text-sm text-slate-200">
+                    (504) 8760-2515 / 3211-5442
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <img
+                  src="/correo.svg"
+                  alt="Correo"
+                  class="w-5 brightness-0 invert"
+                >
+                <div>
+                  <p class="font-semibold">Correo</p>
+                  <p class="text-sm text-slate-200">
+                    sanjuanliceo@gmail.com
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="p-8 md:p-10">
+
+          @if (submitSuccess) {
+            <div
+              class="mb-5 p-4 text-sm text-green-800 bg-green-100 rounded-lg border border-green-200"
+              role="alert">
+              {{ responseMessage }}
+            </div>
+          }
+
+
+          @if (submitError) {
+            <div
+              class="mb-5 p-4 text-sm text-red-800 bg-red-100 rounded-lg border border-red-200"
+              role="alert">
+              {{ responseMessage }}
+            </div>
+          }
+
+
+          <form
+            [formGroup]="contactForm"
+            (ngSubmit)="onSubmit()"
+            class="space-y-5"
+          >
+
+            <div>
+
+              <label
+                for="name"
+                class="block text-sm font-medium text-slate-700 mb-1">
+                Nombre Completo
+              </label>
+
+              <input
+                type="text"
+                id="name"
+                formControlName="name"
+                placeholder="Juan Pérez"
+                [ngClass]="{
+                  '  border-red-500 focus:ring-red-500 focus:border-red-500':
+                  isFieldInvalid('name')
+                }"
+                class="w-full px-4 py-2.5   border border-slate-300 rounded-lg
+                       focus:outline-none focus:ring-2 focus:ring-[#072f60]
+                       focus:border-[#072f60] transition duration-150
+                       text-slate-800 placeholder-slate-400"
+              >
+
+              <p 
+      class="text-red-500 text-xs mt-1 min-h-5"
+      [class.invisible]="!isFieldInvalid('name')">
+      @if (contactForm.get('name')?.hasError('required')) {
+        El nombre completo es obligatorio.
+      } @else if (contactForm.get('name')?.hasError('minlength')) {
+        El nombre debe tener al menos 20 caracteres.
+      }
+    </p>
+  </div>
+            
+
+            <div>
+
+              <label
+                for="email"
+                class="block text-sm font-medium text-slate-700 mb-1">
+                Correo Electrónico
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                formControlName="email"
+                placeholder="ejemplo@correo.com"
+                [ngClass]="{
+                  'border-red-500 focus:ring-red-500 focus:border-red-500':
+                  isFieldInvalid('email')
+                }"
+                class="w-full px-4 py-2.5 border border-slate-300 rounded-lg
+                       focus:outline-none focus:ring-2 focus:ring-[#072f60]
+                       focus:border-[#072f60] transition duration-150
+                       text-slate-800 placeholder-slate-400"
+              >
+
+              <p 
+      class="text-red-500 text-xs mt-1 min-h-5"
+      [class.invisible]="!isFieldInvalid('email')">
+      @if (contactForm.get('email')?.hasError('required')) {
+        El correo electrónico es obligatorio.
+      } @else if (contactForm.get('email')?.hasError('email')) {
+        Ingresa un correo electrónico válido.
+      }
+    </p>
+
+            </div>
+
+            <div>
+
+              <label
+                for="phone"
+                class="block text-sm font-medium text-slate-700 mb-1">
+                Teléfono (Opcional)
+              </label>
+
+              <input
+                type="tel"
+                id="phone"
+                formControlName="phone"
+                placeholder=" 9999-9999"
+                [ngClass]="{
+                  'border-red-500 focus:ring-red-500 focus:border-red-500':
+                  isFieldInvalid('phone')
+                }"
+                class="w-full px-4 py-2.5 border border-slate-300 rounded-lg
+                       focus:outline-none focus:ring-2 focus:ring-[#072f60]
+                       focus:border-[#072f60] transition duration-150
+                       text-slate-800 placeholder-slate-400"
+              >
+
+             <p 
+      class="text-red-500 text-xs mt-1 min-h-5"
+      [class.invisible]="!isFieldInvalid('phone')">
+      Ingresa un número de teléfono válido (mínimo 8 dígitos).
+    </p>
+
+            </div>
+
+            <div>
+
+              <label
+                for="message"
+                class="block text-sm font-medium text-slate-700 mb-1">
+                Mensaje
+              </label>
+
+              <textarea
+                id="message"
+                formControlName="message"
+                rows="5"
+                placeholder="Escribe tu mensaje aquí..."
+                [ngClass]="{
+                  'border-red-500 focus:ring-red-500 focus:border-red-500':
+                  isFieldInvalid('message')
+                }"
+                class="w-full p-3 border border-slate-300 rounded-lg
+                       focus:outline-none focus:ring-2 focus:ring-[#072f60]
+                       focus:border-[#072f60] transition duration-150
+                       text-slate-800 placeholder-slate-400 resize-none"
+              ></textarea>
+
+              <p 
+      class="text-red-500 text-xs mt-1 min-h-5"
+      [class.invisible]="!isFieldInvalid('message')">
+      @if (contactForm.get('message')?.hasError('required')) {
+        El mensaje no puede estar vacío.
+      } @else if (contactForm.get('message')?.hasError('minlength')) {
+        El mensaje debe incluir al menos 20 caracteres.
+      }
+    </p>
+
+              
+
+            </div>
+
+            <button
+              type="submit"
+              [disabled]="isSubmitting"
+              class="w-full bg-[#8B0015] hover:bg-[#072f60]
+                     disabled:bg-slate-400 text-white font-semibold
+                     py-3 px-4 rounded-lg shadow-md hover:shadow-lg
+                     transition duration-200 flex items-center
+                     justify-center gap-2 cursor-pointer
+                     disabled:cursor-not-allowed"
+            >
+
+              @if (isSubmitting) {
+                <span>Enviando...</span>
+              }
+
+              @else {
+                <span>ENVIAR MENSAJE</span>
+              }
+
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+      <section class="mt-16">
+
+        <div class="text-center mb-8">
+
+          <h2 class="text-3xl font-bold text-slate-900 mt-2">
+            Nuestra Ubicación
+          </h2>
+
+          <div class="w-12 h-1 bg-[#8B0015] mx-auto mt-4 mb-4"></div>
+
+          <p class="text-slate-600">
+            Bo. Los Dolores, Calle La Fuente, Tegucigalpa, Francisco Morazán.
+          </p>
+
+        </div>
+
+        <div class="w-full h-[350px] md:h-[420px] rounded-2xl overflow-hidden border border-slate-200 shadow-md">
+
+          <iframe
+            title="Ubicación Colegio Liceo San Juan"
+            src="https://maps.google.com/maps?q=Liceo+San+Juan+Tegucigalpa&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            class="w-full h-full border-0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+</div>
+
