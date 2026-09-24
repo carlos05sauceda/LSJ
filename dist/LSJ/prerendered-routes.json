@@ -1,0 +1,9 @@
+{
+  "routes": {
+    "/": {},
+    "/Contacto": {},
+    "/Galeria": {},
+    "/Home": {},
+    "/OfertaAcademica": {}
+  }
+}
