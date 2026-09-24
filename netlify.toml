@@ -1,0 +1,11 @@
+
+
+
+  [build]
+  command = "npx ng build"
+  publish = "dist/LSJ/browser"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
